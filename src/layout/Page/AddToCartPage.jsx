@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom'
 import Price from '../../Component/Price'
 
 const AddToCartPage = () => {
-    const { Cart, removeCartItm, Clear_Cart, TotalAmount, DeliveryCharge } = useContext(ProductContext)
+    const { Cart, Clear_Cart, TotalAmount, DeliveryCharge } = useContext(ProductContext)
+    const { removeCartItm } = useContext(ProductContext)
 
     if (Cart.length == 0) {
         return (

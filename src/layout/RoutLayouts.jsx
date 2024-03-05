@@ -2,18 +2,17 @@ import React from 'react'
 import Navber from './Navber'
 import { Outlet } from 'react-router-dom'
 import Footer from '../Component/Footer'
-import ProductContext from '../Context/ProductContext'
 import ProductState from '../Context/ProductState'
-import CartState from '../CartContext_Folder/CartState'
+import FilterState from '../Filter_Contex/FilterState'
 
 const RoutLayouts = () => {
     return (
         <ProductState>
-            <CartState>
+            <FilterState>
                 <Navber />
                 <Outlet />
                 <Footer />
-            </CartState>
+            </FilterState>
         </ProductState>
     )
 }

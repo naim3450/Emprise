@@ -35,6 +35,25 @@ export const reducer = (state, action) => {
     // Error Part
 
 
+    // Grid View
+    if (action.type == "SET_GRID_VIEW") {
+        return {
+            ...state,
+            Grid_Veiw: true,
+        }
+    }
+    // Grid View
+
+    // List View
+    if (action.type == "SET_LIST_VIEW") {
+        return {
+            ...state,
+            Grid_Veiw: false,
+        }
+    }
+    // List View
+
+
     // thats my single_looding part
     if (action.type === "SINGLE_PRODUCT_LOADING") {
         return {

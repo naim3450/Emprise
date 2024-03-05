@@ -31,6 +31,7 @@ const initialState = {
     TotaQuantity: 0,
     TotalAmount: 0,
     DeliveryCharge: 10000,
+    Grid_Veiw: true,
     // Cart: getLocalStorageData()
 }
 // This is my initialState/ state value
@@ -101,6 +102,19 @@ const ProductState = ({ children }) => {
     }
     // Get SingleProduct
 
+    // Grid Vew
+    const setGridvew = () => {
+        dispatch({
+            type: "SET_GRID_VIEW"
+        })
+    }
+    const setListvew = () => {
+        dispatch({
+            type: "SET_LIST_VIEW"
+        })
+    }
+    // Grid Vew
+
     // AddToCart
     const addToCardBtn = (id, stock, amount, company, price, color, name, product) => {
         dispatch({
@@ -160,7 +174,7 @@ const ProductState = ({ children }) => {
     }, [state.Cart])
     // ToQuantity  And  TotalAmount 
     return (
-        <ProductContext.Provider value={{ ...state, get_Single_Products, addToCardBtn, removeCartItm, Clear_Cart, Increment, Decrement, }}>
+        <ProductContext.Provider value={{ ...state, get_Single_Products, addToCardBtn, removeCartItm, Clear_Cart, Increment, Decrement, setGridvew, setListvew }}>
             {children}
         </ProductContext.Provider>
     )
